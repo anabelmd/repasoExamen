@@ -33,9 +33,9 @@
         let descender = function () {
             //Obtengo primer elemento de la lista que es el primer li
             let equipoPrimerDivision
-                = primeraLista.lastElementChild;
+                = primeraLista.firstElementChild;
             //paso este li a la segunda lista
-            primeraLista.lastElementChild ? segundaLista.appendChild(equipoPrimerDivision
+            primeraLista.firstElementChild ? segundaLista.appendChild(equipoPrimerDivision
             ) : alert("No hay más equipos");
 
         }
