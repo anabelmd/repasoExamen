@@ -3,13 +3,15 @@
         const cinema = document.getElementById("cinema");
         let reservados = 0;
 
-
+        let contadorId = 0;
         for (let i = 0; i < 50; i++) {
             //creo asiento
-            let asiento = document.createElement("div");
+
+            const asiento = document.createElement("div");
             asiento.className = "seat";
-            asiento.id = "idAsiento";
+            asiento.id = contadorId;
             cinema.appendChild(asiento);
+            contadorId++;
 
 
             if (Math.random() < 0.2 || (i > 40 && reservados < 10)) {
@@ -18,16 +20,22 @@
             }
         }
 
-        // let cambiarAparienciaAsiento = function () {
-        //     //recupero asiento
-        //     let asientoSeleccionado = document.getElementById("idAsiento");
-        //     asientoSeleccionado.style.backgroundColor = "blue";
+        let cambiarAparienciaAsiento = function (contadorId) {
+            //recupero asientos (son div)
 
-        // }
-        // asientoSeleccionado.addEventListener("click", cambiarAparienciaAsiento);
+            for (let i = 0; i < div; i++) {
+                const div = document.getElementsByTagName("div");
+                if (div[i].id == contadorId) {
+                    div[i].style.backgroundColor = "blue";
+                }
+            }
 
+            div.addEventListener("click", cambiarAparienciaAsiento);
+        }
 
     }
 
+
     document.addEventListener("DOMContentLoaded", inicio);
 }
+
